@@ -56,6 +56,7 @@ export class Game {
   pvx = 0; pvy = 0;
   pullX = 0; pullY = 0;
   tutorial = false;
+  tipOn = false; tipSaid = false;
   rng = new RNG(1);
   cam = { x: 0, y: 0 };
   shakeAmt = 0;
@@ -221,6 +222,7 @@ export class Game {
     this.shakeAmt = 0; this.whiteFlash = 0; this.speech = null; this.endSent = false; this.quip = '';
     this.god = query.get('god') === '1';
     this.tutorial = !save.tutorialDone;
+    this.tipOn = this.tutorial; this.tipSaid = false;
     const sw = new Weapon(WEAPON_BY_ID[ch.weapon]);
     sw.timer = 1.2;
     this.p.weapons.push(sw);
@@ -333,6 +335,17 @@ export class Game {
     for (let i = this.banners.length - 1; i >= 0; i--) { this.banners[i].t += dt; if (this.banners[i].t >= this.banners[i].dur) this.banners.splice(i, 1); }
     if (this.speech) { this.speech.t += dt; if (this.speech.t >= this.speech.dur) this.speech = null; }
     if (this.magnetT > 0) this.magnetT -= dt;
+    if (this.tipOn && !this.tipSaid && this.time >= 7) {
+      // first run: the kitten explains the basics when the first monster closes in
+      let near = this.time >= 20;
+      for (let i = 0; i < this.act.length && !near; i++) { const e = this.act[i]; if (e.alive && !e.dying && Math.abs(e.x - this.p.x) < 150 && Math.abs(e.y - this.p.y) < 100) near = true; }
+      if (near) {
+        this.tipSaid = true;
+        this.say('Here they come!', 2.4);
+        this.say('If they touch me, I lose health!', 3, 2.6);
+        this.say('I need to survive!', 2.8, 5.8);
+      }
+    }
     if (this.tutorial && this.time > 32) { this.tutorial = false; save.tutorialDone = true; persist(); }
     const minute = this.time / 60;
     setMusicIntensity(clamp(minute / 12, 0, 1));
