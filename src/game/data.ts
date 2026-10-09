@@ -253,7 +253,7 @@ export interface EnemyDef {
 }
 export const ENEMIES: EnemyDef[] = [
   { id: 'rat', name: 'RAT', hp: 6, dmg: 4, speed: 52, xp: 1, kb: 0, r: 4, weight: 10, from: 0, beh: 'chase', col: '#8c8896', group: 5, desc: 'Fast, weak, and everywhere.', hidden: true },
-  { id: 'slime', name: 'SLIME', hp: 14, dmg: 4, speed: 32, xp: 2, kb: 0.2, r: 6, weight: 10, from: 0, beh: 'chase', col: '#5ed16a', group: 4, desc: 'Squishy and everywhere.' },
+  { id: 'slime', name: 'SLIME', hp: 10, dmg: 4, speed: 32, xp: 2, kb: 0.2, r: 6, weight: 10, from: 0, beh: 'chase', col: '#5ed16a', group: 4, desc: 'Squishy and everywhere.' },
   { id: 'bat', name: 'BAT', hp: 7, dmg: 3, speed: 58, xp: 2, kb: 0, r: 5, weight: 7, from: 1, beh: 'zigzag', col: '#5a4a86', group: 3, desc: 'Flutters in unpredictable zig-zags.' },
   { id: 'spider', name: 'SPIDER', hp: 14, dmg: 4, speed: 44, xp: 3, kb: 0.1, r: 5, weight: 6, from: 2, beh: 'lunge', col: '#4a3556', desc: 'Stops, then pounces.' },
   { id: 'goose', name: 'ANGRY GOOSE', hp: 38, dmg: 9, speed: 52, xp: 6, kb: 0.2, r: 6, weight: 4, from: 3, beh: 'goose', col: '#f4f4f4', desc: 'Honks. Charges. Unpredictable.', hidden: true },

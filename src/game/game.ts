@@ -698,7 +698,8 @@ export class Game {
     e.x = clamp(x, 6, WORLD_W - 6); e.y = clamp(y, 6, WORLD_H - 6);
     e.kx = 0; e.ky = 0; e.t = rand(0, 2); e.st = 0; e.stT = rand(0.5, 2.5); e.c1 = 0; e.c2 = 0; e.c3 = 0; e.ph = 1; e.ax = 0; e.ay = 0;
     e.flash = 0; e.slowT = 0; e.dying = 0; e.anim = rand(0, 2); e.tick.fill(0); e.frozenT = 0; e.poisonT = 0; e.lastSrc = ''; e.face = this.p.x > e.x ? 1 : -1; e.home = 0;
-    e.maxHp = def.hp * hpMul * (1 + cu) * (elite ? 3 : 1);
+    // slimes never get tankier: always a one-hit pop for the starting sword
+    e.maxHp = def.hp * (def.id === 'slime' && !elite ? 1 : hpMul) * (1 + cu) * (elite ? 3 : 1);
     e.hp = e.maxHp;
     e.dmg = def.dmg * dmgMul * (elite ? 1.5 : 1);
     e.speed = def.speed * spdMul * (1 + cu * 0.35) * (elite ? 0.95 : 1);
