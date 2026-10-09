@@ -163,3 +163,4 @@ a.pbtn { display: inline-flex; text-decoration: none; }
 @media (max-height: 340px) { .tc-dash { width: 64px; height: 64px; } .tc-pause { right: calc(94px + env(safe-area-inset-right)); } }
 
 .tourback { position: absolute; inset: 0; background: rgba(8, 4, 16, 0.86); z-index: 5; pointer-events: auto; }
+.topleft { position: absolute; left: 14px; top: 10px; z-index: 4; pointer-events: auto; }

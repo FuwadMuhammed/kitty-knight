@@ -8,6 +8,7 @@ import {
 import type { Card, Reward, RunResult } from '../game/types';
 import { fmtNum, fmtTime } from '../game/util';
 import { isTouchDevice } from './touchDetect';
+import { canFullscreen, enterFullscreen, exitFullscreen, fsElement, isStandalone } from './fullscreen';
 import { QUEST_BY_TARGET } from '../game/data';
 import { isUnlocked, questLifetime } from '../game/quests';
 import { spriteURL, rawURL, KG, SW } from '../game/sprites';
@@ -19,9 +20,40 @@ const useRefresh = () => {
 };
 
 // ------------------------------------------------------------------ MAIN MENU
+function FullscreenBtn() {
+  const [fs, setFs] = useState(!!fsElement());
+  const [help, setHelp] = useState(false);
+  useEffect(() => {
+    const h = () => setFs(!!fsElement());
+    document.addEventListener('fullscreenchange', h);
+    document.addEventListener('webkitfullscreenchange', h);
+    return () => { document.removeEventListener('fullscreenchange', h); document.removeEventListener('webkitfullscreenchange', h); };
+  }, []);
+  if (!isTouchDevice() || isStandalone()) return null;
+  const click = () => { if (!canFullscreen()) setHelp(true); else if (fs) exitFullscreen(); else enterFullscreen(); };
+  return (
+    <>
+      <div className="topleft"><Btn small onClick={click}>{fs ? 'EXIT FULLSCREEN' : 'FULLSCREEN'}</Btn></div>
+      {help && (
+        <div className="tourback" onClick={() => setHelp(false)}>
+          <Panel className="abs" style={{ left: 120, top: 70, width: 400, height: 190, padding: 12, textAlign: 'center' }}>
+            <T s={3} c="#ffe680" sh="#7a4a10" align="center">PLAY FULLSCREEN</T>
+            <div style={{ height: 12 }} />
+            <div style={{ marginBottom: 6 }}><T s={2} c="#fff" align="center">THIS BROWSER CANNOT GO FULLSCREEN BY ITSELF.</T></div>
+            <div style={{ marginBottom: 6 }}><T s={2} c="#9affb0" align="center">TAP THE SHARE BUTTON, THEN ADD TO HOME SCREEN.</T></div>
+            <T s={2} c="#ffe680" align="center">OPEN KITTY KNIGHT FROM YOUR HOME SCREEN.</T>
+          </Panel>
+          <div className="bottomrow" style={{ bottom: 40 }}><Btn s={3} color="#2f7a3a" onClick={() => setHelp(false)}>GOT IT</Btn></div>
+        </div>
+      )}
+    </>
+  );
+}
+
 export function MainMenu({ go }: { go: (s: string) => void }) {
   return (
     <div className="screen">
+      <FullscreenBtn />
       <div className="center" style={{ top: 10 }}>
         <T s={5} c="#ffd24a" sh="#6a2a10" align="center">TINY KNIGHT</T>
         <div style={{ height: 3 }} />
