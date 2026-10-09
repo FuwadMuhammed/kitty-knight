@@ -17,8 +17,25 @@ const G: Record<string, number[]> = {
 G['x'] = [0, 5, 2, 5, 0];
 
 export const GLYPH_H = 5;
+import { CANVAS_WEB_FONT as WEB_FONT, FONT_FAMILY, CANVAS_FONT_PX } from './fontConfig';
+
+const wcache = new Map<string, number>();
+let measureCtx: CanvasRenderingContext2D | null = null;
+if (WEB_FONT && typeof document !== 'undefined' && (document as any).fonts?.addEventListener) {
+  (document as any).fonts.addEventListener('loadingdone', () => wcache.clear());
+}
+const canvasFont = () => `600 ${CANVAS_FONT_PX}px ${FONT_FAMILY}`;
 export function textWidth(s: string) {
-  return s.length ? s.length * 4 - 1 : 0;
+  if (!s.length) return 0;
+  if (!WEB_FONT) return s.length * 4 - 1;
+  let w = wcache.get(s);
+  if (w === undefined) {
+    if (!measureCtx) measureCtx = document.createElement('canvas').getContext('2d')!;
+    measureCtx.font = canvasFont();
+    w = Math.ceil(measureCtx.measureText(s.toUpperCase()).width);
+    wcache.set(s, w);
+  }
+  return w;
 }
 
 type Ctx = CanvasRenderingContext2D;
@@ -34,6 +51,43 @@ function glyphRects(ctx: Ctx, s: string, x: number, y: number) {
       for (let c = 0; c < 3; c++) if (row & (4 >> c)) ctx.rect(gx + c, y + r, 1, 1);
     }
   }
+}
+
+// Web-font text is rasterised once to a tiny canvas and alpha-thresholded so it stays crisp at 1x.
+const wtex = new Map<string, HTMLCanvasElement>();
+let wcount = 0;
+if (WEB_FONT && typeof document !== 'undefined' && (document as any).fonts?.addEventListener) {
+  (document as any).fonts.addEventListener('loadingdone', () => wtex.clear());
+}
+function webText(s: string, col: string, shadow: string | null): HTMLCanvasElement {
+  const key = s + '|' + col + '|' + shadow;
+  let c = wtex.get(key);
+  if (c) return c;
+  const w = textWidth(s) + 2, h = CANVAS_FONT_PX + 4;
+  const ink = (color: string) => {
+    const t = document.createElement('canvas');
+    t.width = w; t.height = h;
+    const x = t.getContext('2d')!;
+    x.font = canvasFont();
+    x.textBaseline = 'top';
+    x.fillStyle = '#000';
+    x.fillText(s.toUpperCase(), 0, 1);
+    const d = x.getImageData(0, 0, w, h);
+    for (let i = 3; i < d.data.length; i += 4) d.data[i] = d.data[i] >= 110 ? 255 : 0;
+    x.putImageData(d, 0, 0);
+    x.globalCompositeOperation = 'source-in';
+    x.fillStyle = color;
+    x.fillRect(0, 0, w, h);
+    return t;
+  };
+  c = document.createElement('canvas');
+  c.width = w + 1; c.height = h + 1;
+  const cx = c.getContext('2d')!;
+  if (shadow) cx.drawImage(ink(shadow), 1, 1);
+  cx.drawImage(ink(col), 0, 0);
+  if (++wcount > 3000) { wtex.clear(); wcount = 0; }
+  wtex.set(key, c);
+  return c;
 }
 
 /** Draw text at integer pixel coords. align: 'l' | 'c' | 'r'. */
@@ -53,6 +107,11 @@ export function drawText(
   else if (align === 'r') px = x - w;
   px = Math.round(px);
   y = Math.round(y);
+  if (WEB_FONT) {
+    const img = webText(s, col, shadow);
+    ctx.drawImage(img, px, y - 1, img.width * scale, img.height * scale);
+    return;
+  }
   if (scale !== 1) {
     ctx.save();
     ctx.translate(px, y);

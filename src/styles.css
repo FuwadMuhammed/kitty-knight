@@ -11,6 +11,8 @@ canvas.game { position: absolute; top: 0; left: 0; width: 100%; height: 100%; im
 .screen.dim { background: rgba(10, 6, 20, 0.9); }
 .screen.overlay { background: rgba(10, 6, 20, 0.72); }
 .pxt { display: inline-block; line-height: 0; vertical-align: top; }
+.pxt.webt { line-height: 0.95; image-rendering: auto; -webkit-font-smoothing: none; font-smooth: never; letter-spacing: 0; font-synthesis: none; }
+@font-face { font-family: 'Pixelify Sans'; src: url('./fonts/pixelify-sans.woff2') format('woff2'); font-weight: 400 700; font-style: normal; font-display: swap; }
 .ppanel, .pbtn, .card, .cell { line-height: 0; }
 .pxl { display: flex; flex-wrap: wrap; align-items: flex-end; }
 .pxw, .pxi { image-rendering: pixelated; image-rendering: crisp-edges; display: block; }

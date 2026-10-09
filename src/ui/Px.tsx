@@ -2,6 +2,7 @@ import React from 'react';
 import { textURL } from '../game/font';
 import { ICON, ensureSprites, iconURL, spriteURL } from '../game/sprites';
 import { sfx } from '../game/audio';
+import { WEB_FONT, FONT_FAMILY, UI_FONT_PX } from '../game/fontConfig';
 
 /** Pixel text: renders each word from the bitmap font as a crisp image so it wraps naturally. */
 export function T({
@@ -9,6 +10,14 @@ export function T({
 }: { children: React.ReactNode; s?: number; c?: string; sh?: string | null; align?: 'left' | 'center' | 'right'; style?: React.CSSProperties }) {
   const text = React.Children.toArray(children).join('');
   const lines = text.split('\n');
+  if (WEB_FONT) {
+    return (
+      <span className="pxt webt" aria-label={text} style={{
+        fontFamily: FONT_FAMILY, fontWeight: 600, fontSize: UI_FONT_PX * s, lineHeight: '0.95', color: c, textAlign: align,
+        textTransform: 'uppercase', textShadow: sh ? `${s}px ${s}px 0 ${sh}` : undefined, whiteSpace: 'pre-wrap', ...style,
+      }}>{text}</span>
+    );
+  }
   const jc = align === 'center' ? 'center' : align === 'right' ? 'flex-end' : 'flex-start';
   return (
     <span className="pxt" style={style} aria-label={text}>
