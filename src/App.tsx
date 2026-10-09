@@ -10,8 +10,8 @@ import { renderShareCard } from './game/share';
 import { RotatePrompt, TouchControls } from './ui/touch';
 import { isPortrait, isTouchDevice } from './ui/touchDetect';
 
-/** biggest the game window gets on desktop (4 = 1280x720) */
-const MAX_DESKTOP_SCALE = 4;
+/** biggest the game window gets on desktop (3 = 960x540) */
+const MAX_DESKTOP_SCALE = 3;
 
 type Screen = 'menu' | 'select' | 'upgrades' | 'collection' | 'settings' | 'run' | 'results';
 type Overlay = { kind: 'none' | 'pause' | 'levelup' | 'chest'; data?: any };
@@ -37,8 +37,8 @@ export default function App() {
       const w = vv?.width ?? window.innerWidth, h = vv?.height ?? window.innerHeight;
       const dpr = window.devicePixelRatio || 1;
       // desktop: leave a black margin around the framed game (like a console window); phones use every pixel
-      const fill = touch ? 1 : 0.9;
-      // ...and never bigger than 1280x720 (4x): on huge monitors a giant game loses its cute, tiny-window charm
+      const fill = touch ? 1 : 0.8;
+      // ...and never bigger than 960x540 (3x): on huge monitors a giant game loses its cute, tiny-window charm
       const s = Math.min((w * fill) / 320, (h * fill) / 180, touch ? Infinity : MAX_DESKTOP_SCALE);
       setScale(Math.max(0.5, Math.floor(s * dpr) / dpr));
       setPortrait(touch && isPortrait());
