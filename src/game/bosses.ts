@@ -65,7 +65,7 @@ function dog(g: Game, e: Enemy, dt: number) {
     case 4:
       if (e.c2 === 0) {
         e.c2 = 1;
-        for (let i = 0; i < 6; i++) { const a = (i / 6) * Math.PI * 2; g.spawnEnemy('rat', e.x + Math.cos(a) * 34, e.y + Math.sin(a) * 34); }
+        for (let i = 0; i < 6; i++) { const a = (i / 6) * Math.PI * 2; g.spawnEnemy('slime', e.x + Math.cos(a) * 34, e.y + Math.sin(a) * 34); }
         if (e.ph === 2) for (let i = 0; i < 3; i++) g.spawnEnemy('bat', e.x + rand(-40, 40), e.y + rand(-40, 40));
       }
       if (e.stT <= 0) { e.c2 = 0; go(e, 0, e.ph === 2 ? 2.2 : 3.2); }

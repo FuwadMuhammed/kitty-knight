@@ -248,13 +248,15 @@ export type Behavior = 'chase' | 'zigzag' | 'lunge' | 'charge' | 'ranged' | 'spl
 export interface EnemyDef {
   id: string; name: string; hp: number; dmg: number; speed: number; xp: number; kb: number; r: number;
   weight: number; from: number; beh: Behavior; col: string; group?: number; desc: string;
+  /** Not spawned and not listed. Kept in the table so ids/sprites stay valid. */
+  hidden?: boolean;
 }
 export const ENEMIES: EnemyDef[] = [
-  { id: 'rat', name: 'RAT', hp: 6, dmg: 4, speed: 52, xp: 1, kb: 0, r: 4, weight: 10, from: 0, beh: 'chase', col: '#8c8896', group: 5, desc: 'Fast, weak, and everywhere.' },
-  { id: 'slime', name: 'SLIME', hp: 24, dmg: 5, speed: 24, xp: 2, kb: 0.2, r: 6, weight: 6, from: 0.25, beh: 'chase', col: '#5ed16a', desc: 'Slow, squishy, surprisingly tanky.' },
-  { id: 'bat', name: 'BAT', hp: 8, dmg: 4, speed: 58, xp: 2, kb: 0, r: 5, weight: 7, from: 2, beh: 'zigzag', col: '#5a4a86', group: 3, desc: 'Flutters in unpredictable zig-zags.' },
+  { id: 'rat', name: 'RAT', hp: 6, dmg: 4, speed: 52, xp: 1, kb: 0, r: 4, weight: 10, from: 0, beh: 'chase', col: '#8c8896', group: 5, desc: 'Fast, weak, and everywhere.', hidden: true },
+  { id: 'slime', name: 'SLIME', hp: 14, dmg: 5, speed: 32, xp: 2, kb: 0.2, r: 6, weight: 10, from: 0, beh: 'chase', col: '#5ed16a', group: 4, desc: 'Squishy and everywhere.' },
+  { id: 'bat', name: 'BAT', hp: 8, dmg: 4, speed: 58, xp: 2, kb: 0, r: 5, weight: 7, from: 1, beh: 'zigzag', col: '#5a4a86', group: 3, desc: 'Flutters in unpredictable zig-zags.' },
   { id: 'spider', name: 'SPIDER', hp: 16, dmg: 6, speed: 44, xp: 3, kb: 0.1, r: 5, weight: 6, from: 2, beh: 'lunge', col: '#4a3556', desc: 'Stops, then pounces.' },
-  { id: 'goose', name: 'ANGRY GOOSE', hp: 38, dmg: 9, speed: 52, xp: 6, kb: 0.2, r: 6, weight: 4, from: 3, beh: 'goose', col: '#f4f4f4', desc: 'Honks. Charges. Unpredictable.' },
+  { id: 'goose', name: 'ANGRY GOOSE', hp: 38, dmg: 9, speed: 52, xp: 6, kb: 0.2, r: 6, weight: 4, from: 3, beh: 'goose', col: '#f4f4f4', desc: 'Honks. Charges. Unpredictable.', hidden: true },
   { id: 'goblin', name: 'GOBLIN', hp: 34, dmg: 8, speed: 40, xp: 4, kb: 0.2, r: 6, weight: 8, from: 4, beh: 'chase', col: '#6fbf4a', desc: 'Medium speed, medium everything.' },
   { id: 'skeleton', name: 'SKELETON', hp: 60, dmg: 9, speed: 28, xp: 5, kb: 0.3, r: 6, weight: 7, from: 4, beh: 'chase', col: '#ece6d3', desc: 'Slow, bony, hard to put down.' },
   { id: 'vacuum', name: 'ROBO VACUUM', hp: 90, dmg: 10, speed: 32, xp: 15, kb: 0.5, r: 9, weight: 2, from: 5, beh: 'vacuum', col: '#8d97ab', desc: 'Sucks. Literally.' },
@@ -270,7 +272,7 @@ export interface BossDef {
   xp: number; warn: string; col: string; desc: string; kill: string;
 }
 export const BOSSES: BossDef[] = [
-  { id: 'dog', name: 'THE EVIL DOG', sprite: 'dog', hp: 1700, dmg: 16, speed: 36, r: 17, at: 3, xp: 150, warn: 'A HUGE THREAT APPROACHES...', col: '#8a5a34', desc: 'Charges, howls, summons rats.', kill: 'Good kitty.' },
+  { id: 'dog', name: 'THE EVIL DOG', sprite: 'dog', hp: 1700, dmg: 16, speed: 36, r: 17, at: 3, xp: 150, warn: 'A HUGE THREAT APPROACHES...', col: '#8a5a34', desc: 'Charges, howls, summons slimes.', kill: 'Good kitty.' },
   { id: 'roobo', name: 'ANCIENT ROOBO', sprite: 'roobo', hp: 4200, dmg: 16, speed: 22, r: 24, at: 6, xp: 300, warn: 'THE ANCIENT EVIL HAS RETURNED.', col: '#b6bccb', desc: 'Sucks you in, spews dust bunnies.', kill: 'It was only a vacuum.' },
   { id: 'dragon', name: 'THE DRAGON', sprite: 'dragon', hp: 8500, dmg: 18, speed: 50, r: 28, at: 9, xp: 500, warn: 'SOMETHING HUGE IS BREATHING...', col: '#3c9a4a', desc: 'Circles overhead, breathes fire.', kill: 'Tiny dragon approves.' },
   { id: 'knight', name: 'THE DARK KNIGHT', sprite: 'knight', hp: 15000, dmg: 20, speed: 34, r: 24, at: 12, xp: 800, warn: 'AN OVERSIZED RIVAL APPEARS...', col: '#34344e', desc: 'Telegraphed slashes, leaps, skeletons.', kill: 'Size is not everything.' },

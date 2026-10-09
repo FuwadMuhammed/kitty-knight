@@ -110,8 +110,8 @@ function Tour({ done, close }: { done: () => void; close: () => void }) {
     { head: 'MOVE YOUR KITTY', hc: '#9ae0ff', art: sp('kitten', 2),
       lines: [[touchy ? 'DRAG ON THE LEFT SIDE TO MOVE' : 'WASD OR ARROW KEYS TO MOVE', '#fff'], ['YOUR SWORD ATTACKS AUTOMATICALLY', '#ffe680'], ['NO ATTACK BUTTON, JUST KEEP MOVING', '#fff']] },
     { head: 'DANGER! ENEMIES HURT YOU', hc: '#ff6a6a',
-      art: <div style={{ display: 'flex', gap: 14, alignItems: 'flex-end' }}>{sp('rat', 3)}{sp('slime', 3)}{sp('goose', 3)}</div>,
-      lines: [['EVERY ENEMY HURTS WHEN IT TOUCHES YOU', '#fff'], ['EVEN THE CUTE LITTLE MICE AND RATS!', '#ff9a9a'], ['KEEP MOVING AND DO NOT LET THEM CATCH YOU', '#ffe680']] },
+      art: <div style={{ display: 'flex', gap: 14, alignItems: 'flex-end' }}>{sp('slime', 3)}{sp('bat', 3)}{sp('spider', 3)}</div>,
+      lines: [['EVERY ENEMY HURTS WHEN IT TOUCHES YOU', '#fff'], ['EVEN THE CUTE AND SQUISHY ONES!', '#ff9a9a'], ['KEEP MOVING AND DO NOT LET THEM CATCH YOU', '#ffe680']] },
     { head: 'DODGE AND SURVIVE', hc: '#ffd24a', art: <Icon id="dash" s={3} />,
       lines: [[touchy ? 'TAP DASH TO ESCAPE A CROWD' : 'PRESS SPACE TO DASH OUT OF TROUBLE', '#fff'], ['YOUR OWN WEAPONS NEVER HURT YOU', '#9aff9a']] },
     { head: 'GROW STRONGER', hc: '#7ae8ff', art: <Icon id="gem" s={3} />,
@@ -178,7 +178,7 @@ export function Collection({ back }: { back: () => void }) {
   const items: Item[] =
     sec === 'weapons' ? WEAPONS.map((w) => ({ id: w.id, name: w.name, desc: `${w.desc}\nAFFECTED BY: ${w.affects.join(', ')}.`, icon: w.icon, hint: 'FIND IT IN A RUN.', lockable: true }))
     : sec === 'passives' ? PASSIVES.map((p) => ({ id: p.id, name: p.name, desc: `${p.fmt(p.per)} PER LEVEL. ${p.desc}`, icon: p.icon, hint: 'FIND IT IN A RUN.', lockable: true }))
-    : sec === 'enemies' ? ENEMIES.map((e) => ({ id: e.id, name: e.name, desc: `${e.desc} HP ${e.hp}.`, sprite: e.id, hint: 'DEFEAT ONE TO LEARN MORE.' }))
+    : sec === 'enemies' ? ENEMIES.filter((e) => !e.hidden).map((e) => ({ id: e.id, name: e.name, desc: `${e.desc} HP ${e.hp}.`, sprite: e.id, hint: 'DEFEAT ONE TO LEARN MORE.' }))
     : sec === 'bosses' ? BOSSES.map((b) => ({ id: b.id, name: b.name, desc: b.desc, sprite: b.sprite, hint: 'MEET IT IN A RUN.' }))
     : EVOS.map((e) => ({ id: e.id, name: e.name, desc: `${WEAPON_BY_ID[e.base].name} LV8 + ${WEAPON_BY_ID[e.partner]?.name || e.partner} LV${e.partnerLevel}. ${e.desc}`, icon: e.icon, hint: 'MAX A WEAPON WITH ITS PARTNER.' }));
   const known = (id: string) => (sec === 'weapons' || sec === 'passives') ? isUnlocked(id) : !!save.coll[sec][id];

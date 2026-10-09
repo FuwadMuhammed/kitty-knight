@@ -940,7 +940,7 @@ export class Game {
     }
   }
   private pickDef(m: number, elite = false): EnemyDef | null {
-    const avail = ENEMIES.filter((d) => d.from <= m && !(elite && ['rat', 'bat', 'slime', 'vacuum'].includes(d.id)));
+    const avail = ENEMIES.filter((d) => !d.hidden && d.from <= m && !(elite && ['rat', 'bat', 'slime', 'vacuum'].includes(d.id)));
     return weightedPick(avail, (d) => {
       let w = d.weight;
       if (elite) return d.hp;
@@ -962,7 +962,7 @@ export class Game {
     if (def) this.spawnEnemy(def.id, undefined, undefined, true);
   }
   private spawnSwarm(m: number) {
-    const id = m >= 2 ? (Math.random() < 0.5 ? 'bat' : 'rat') : 'rat';
+    const id = m >= 2 && Math.random() < 0.5 ? 'bat' : 'slime';
     const a0 = rand(0, TAU);
     const n = Math.min(34, 16 + Math.floor(m * 2));
     const p = this.p;
