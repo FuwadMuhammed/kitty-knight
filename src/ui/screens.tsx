@@ -307,16 +307,21 @@ export function CelebrationFx({ gold = false }: { gold?: boolean }) {
 
 // ------------------------------------------------------------------ LEVEL UP
 export function LevelUp({ cards, level, remaining, choose: pick }: { cards: Card[]; level: number; remaining: number; choose: (c: Card) => void }) {
-  const [tip] = useState(() => !save.levelTipDone);
+  const [step, setStep] = useState(() => (save.levelTipDone ? 99 : 0));
+  const touchy = isTouchDevice();
   const choose = (c: Card) => { if (!save.levelTipDone) { save.levelTipDone = true; persist(); } pick(c); };
   useEffect(() => {
     const h = (e: KeyboardEvent) => {
+      if (step < 2) {
+        if (e.code === 'Enter' || e.code === 'Space') { e.preventDefault(); setStep(step + 1); }
+        return;
+      }
       const i = ['Digit1', 'Digit2', 'Digit3', 'Numpad1', 'Numpad2', 'Numpad3'].indexOf(e.code) % 3;
       if (['Digit1', 'Digit2', 'Digit3', 'Numpad1', 'Numpad2', 'Numpad3'].includes(e.code) && cards[i]) choose(cards[i]);
     };
     window.addEventListener('keydown', h);
     return () => window.removeEventListener('keydown', h);
-  }, [cards, choose]);
+  }, [cards, choose, step]);
   return (
     <div className="screen overlay lvl">
       <CelebrationFx />
@@ -325,11 +330,6 @@ export function LevelUp({ cards, level, remaining, choose: pick }: { cards: Card
         <div style={{ height: 4 }} />
         <T s={2} c="#bfe4ff">{`LEVEL ${level}${remaining > 1 ? `  (${remaining - 1} MORE)` : ''}`}</T>
       </div>
-      {tip && (
-        <div className="center" style={{ top: 340, zIndex: 3 }}>
-          <T s={2} c="#ffe680">LEVEL UP MAKES YOU STRONGER! PICK ONE UPGRADE. CHOOSE WISELY!</T>
-        </div>
-      )}
       <div className="cards">
         {cards.map((c, i) => {
           const r = RARITY[c.rarity];
@@ -349,6 +349,31 @@ export function LevelUp({ cards, level, remaining, choose: pick }: { cards: Card
           );
         })}
       </div>
+      {step < 2 && (
+        <div className="tourback" style={{ zIndex: 6 }}>
+          <Panel className="abs" style={{ left: 120, top: 70, width: 400, height: 200, padding: 12, textAlign: 'center' }}>
+            <T s={3} c="#ffe680" sh="#7a4a10" align="center">{step === 0 ? 'YOU LEVELED UP!' : 'PICK ONE UPGRADE'}</T>
+            <div style={{ height: 52, margin: '12px 0 8px', display: 'flex', alignItems: 'flex-end', justifyContent: 'center' }}>
+              <Icon id={step === 0 ? 'gem' : 'sword'} s={3} />
+            </div>
+            {step === 0 ? (
+              <>
+                <div style={{ marginBottom: 6 }}><T s={2} c="#fff" align="center">DEFEATED MONSTERS DROP GEMS. COLLECT THEM TO FILL THE BAR.</T></div>
+                <T s={2} c="#9affb0" align="center">A FULL BAR MEANS A LEVEL UP, AND YOU GET STRONGER!</T>
+              </>
+            ) : (
+              <>
+                <div style={{ marginBottom: 6 }}><T s={2} c="#fff" align="center">THE GAME PAUSES AND OFFERS YOU 3 CARDS. PICK ONE.</T></div>
+                <div style={{ marginBottom: 6 }}><T s={2} c="#9affb0" align="center">NEW WEAPONS AND UPGRADES MAKE YOU STRONGER.</T></div>
+                <T s={2} c="#ffe680" align="center">{touchy ? 'TAP A CARD. CHOOSE WISELY!' : 'CLICK A CARD OR PRESS 1, 2, 3. CHOOSE WISELY!'}</T>
+              </>
+            )}
+          </Panel>
+          <div className="bottomrow" style={{ bottom: 40 }}>
+            <Btn s={3} color="#2f7a3a" onClick={() => setStep(step + 1)}>{step === 0 ? 'NEXT' : "LET'S PICK"}</Btn>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

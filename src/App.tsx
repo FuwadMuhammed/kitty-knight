@@ -75,6 +75,7 @@ export default function App() {
         end: (r) => { setResult(r); setOverlay({ kind: 'none' }); setScreen('results'); },
       });
       gameRef.current = g;
+      if ((import.meta as any).env?.DEV) (window as any).__game = g;
       g.isTouch = touch;
       if (query.get('autostart') === '1') { g.startRun(); setScreen('run'); }
     })();
