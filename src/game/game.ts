@@ -342,8 +342,8 @@ export class Game {
       if (near) {
         this.tipSaid = true;
         this.say('Here they come!', 2.4);
-        this.say('If they touch me, I lose health!', 3, 2.6);
-        this.say('I need to survive!', 2.8, 5.8);
+        this.say('If they touch me, I lose health!', 5, 2.6);
+        this.say('I need to survive!', 3, 7.8);
       }
     }
     if (this.tutorial && this.time > 32) { this.tutorial = false; save.tutorialDone = true; persist(); }
