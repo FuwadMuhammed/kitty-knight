@@ -20,7 +20,9 @@ Controls: WASD / arrows to move, Space to dash, Esc to pause. On phones: drag th
 1. Import `FuwadMuhammed/kitty-knight` in Vercel — the framework (Vite), build command and `dist` output are already set in `vercel.json`.
 2. Deploy. That's it.
 
-The canonical URL, social-share tags, `robots.txt` and `sitemap.xml` are generated at build time from the production domain Vercel provides. If you attach a custom domain, add an environment variable `SITE_URL=https://your-domain.com` (Project → Settings → Environment Variables) and redeploy so every link uses the custom domain.
+Live at **https://kitty.byfu.app**. In Vercel add it under Project → Settings → Domains and point your DNS (a CNAME for `kitty` to `cname.vercel-dns.com`, or the records Vercel shows).
+
+The canonical URL, social-share tags, `robots.txt` and `sitemap.xml` are generated at build time and default to `https://kitty.byfu.app`. To use a different domain, set an environment variable `SITE_URL=https://your-domain.com` in Vercel and redeploy.
 
 SEO / branding assets are generated from the game's own sprites with `npx tsx tools/make_brand.ts` (favicon set, app icons, 1200x630 share image).
 

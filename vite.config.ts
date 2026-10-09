@@ -2,8 +2,8 @@ import { defineConfig, type Plugin } from 'vite';
 import react from '@vitejs/plugin-react';
 
 // Public site address, used for canonical / social-card URLs, robots.txt and the sitemap.
-// On Vercel it is picked up automatically; elsewhere set SITE_URL=https://your.domain when building.
-const siteUrl = (process.env.SITE_URL || (process.env.VERCEL_PROJECT_PRODUCTION_URL ? 'https://' + process.env.VERCEL_PROJECT_PRODUCTION_URL : '')).replace(/\/+$/, '');
+// Defaults to the production domain; override with SITE_URL=https://other.domain when building elsewhere.
+const siteUrl = (process.env.SITE_URL || 'https://kitty.byfu.app').replace(/\/+$/, '');
 
 const KEYWORDS = [
   'kitty knight', 'tiny knight survivors', 'cat knight', 'kitten in armor', 'cat in armor meme', 'cute cat game', 'pixel cat game', 'cat survivors game',
