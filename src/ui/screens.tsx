@@ -10,7 +10,7 @@ import { fmtNum, fmtTime } from '../game/util';
 import { isTouchDevice } from './touchDetect';
 import { QUEST_BY_TARGET } from '../game/data';
 import { isUnlocked, questLifetime } from '../game/quests';
-import { spriteURL } from '../game/sprites';
+import { spriteURL, rawURL, KG, SW } from '../game/sprites';
 import { canvasBlob, copyImage, copyText, downloadBlob, shareText } from '../game/share';
 
 const useRefresh = () => {
@@ -53,6 +53,7 @@ export function HowToPlay({ start, back }: { start: (id: string) => void; back: 
   const go = () => { if (save.tourDone) start(ch.id); else setTour(true); };
   const touchy = isTouchDevice();
   const k = spriteURL('kitten', 0);
+  const sw = rawURL('sword');
   const steps: [string, string, string][] = [
     ['boots', 'MOVE', touchy ? 'DRAG ON THE LEFT SIDE' : 'WASD OR ARROW KEYS'],
     ['sword', 'FIGHT', 'WEAPONS ATTACK BY THEMSELVES'],
@@ -65,7 +66,11 @@ export function HowToPlay({ start, back }: { start: (id: string) => void; back: 
       <div className="center" style={{ top: 12 }}><T s={4} c="#ffd24a" sh="#6a2a10">THIS IS YOUR KNIGHT</T></div>
       <Panel className="abs" style={{ left: 28, top: 60, width: 190, height: 238, padding: 10, textAlign: 'center' }}>
         <div style={{ display: 'flex', justifyContent: 'center', margin: '2px 0 8px' }}>
-          <img className="pxi" src={k.url} width={k.w * 3} height={k.h * 3} alt="" />
+          <div style={{ position: 'relative', width: k.w * 3, height: k.h * 3 }}>
+            <img className="pxi" src={sw.url} width={sw.w * 3} height={sw.h * 3} alt=""
+              style={{ position: 'absolute', left: (k.w - KG.x - SW.gx) * 3, top: (KG.y - SW.gripY) * 3, transformOrigin: `${SW.gx * 3}px ${SW.gripY * 3}px`, transform: 'rotate(0.06rad)' }} />
+            <img className="pxi" src={k.url} width={k.w * 3} height={k.h * 3} alt="" style={{ position: 'absolute', left: 0, top: 0 }} />
+          </div>
         </div>
         <T s={3} c="#ffe680" align="center">{ch.name}</T>
         <div style={{ height: 6 }} />
