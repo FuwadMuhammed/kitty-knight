@@ -33,7 +33,9 @@ export default function App() {
       // visualViewport follows the *visible* area as mobile browser bars slide in and out
       const w = vv?.width ?? window.innerWidth, h = vv?.height ?? window.innerHeight;
       const dpr = window.devicePixelRatio || 1;
-      const s = Math.min(w / 320, h / 180);
+      // desktop: leave a black margin around the framed game (like a console window); phones use every pixel
+      const fill = touch ? 1 : 0.9;
+      const s = Math.min((w * fill) / 320, (h * fill) / 180);
       setScale(Math.max(0.5, Math.floor(s * dpr) / dpr));
       setPortrait(touch && isPortrait());
     };
