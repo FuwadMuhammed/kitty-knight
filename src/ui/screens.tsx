@@ -49,6 +49,8 @@ export function MainMenu({ go }: { go: (s: string) => void }) {
 // ------------------------------------------------------------------ YOUR KNIGHT + HOW TO PLAY
 export function HowToPlay({ start, back }: { start: (id: string) => void; back: () => void }) {
   const ch = CHARACTERS[0];
+  const [tour, setTour] = useState(false);
+  const go = () => { if (save.tourDone) start(ch.id); else setTour(true); };
   const touchy = isTouchDevice();
   const k = spriteURL('kitten', 0);
   const steps: [string, string, string][] = [
@@ -85,8 +87,47 @@ export function HowToPlay({ start, back }: { start: (id: string) => void; back: 
         ))}
       </Panel>
       <div className="bottomrow">
-        <Btn s={3} color="#2f7a3a" onClick={() => start(ch.id)}>START RUN</Btn>
+        <Btn s={3} color="#2f7a3a" onClick={go}>START RUN</Btn>
+        <Btn onClick={() => setTour(true)}>TOUR</Btn>
         <Btn onClick={back}>BACK</Btn>
+      </div>
+      {tour && <Tour done={() => { setTour(false); if (!save.tourDone) { save.tourDone = true; persist(); start(ch.id); } }} close={() => setTour(false)} />}
+    </div>
+  );
+}
+
+// ------------------------------------------------------------------ QUICK TOUR (first run)
+function Tour({ done, close }: { done: () => void; close: () => void }) {
+  const [i, setI] = useState(0);
+  const touchy = isTouchDevice();
+  const sp = (id: string, z: number) => { const x = spriteURL(id, 0); return <img className="pxi" src={x.url} width={x.w * z} height={x.h * z} alt="" />; };
+  const slides: { head: string; hc: string; art: React.ReactNode; lines: [string, string][] }[] = [
+    { head: 'MOVE YOUR KITTY', hc: '#9ae0ff', art: sp('kitten', 2),
+      lines: [[touchy ? 'DRAG ON THE LEFT SIDE TO MOVE' : 'WASD OR ARROW KEYS TO MOVE', '#fff'], ['YOUR SWORD AND TOYS ATTACK BY THEMSELVES', '#ffe680']] },
+    { head: 'DANGER! ENEMIES HURT YOU', hc: '#ff6a6a',
+      art: <div style={{ display: 'flex', gap: 14, alignItems: 'flex-end' }}>{sp('rat', 3)}{sp('slime', 3)}{sp('goose', 3)}</div>,
+      lines: [['EVERY ENEMY HURTS WHEN IT TOUCHES YOU', '#fff'], ['EVEN THE CUTE LITTLE MICE AND RATS!', '#ff9a9a'], ['KEEP MOVING AND DO NOT LET THEM CATCH YOU', '#ffe680']] },
+    { head: 'DODGE AND SURVIVE', hc: '#ffd24a', art: <Icon id="dash" s={3} />,
+      lines: [[touchy ? 'TAP DASH TO ESCAPE A CROWD' : 'PRESS SPACE TO DASH OUT OF TROUBLE', '#fff'], ['YOUR OWN WEAPONS NEVER HURT YOU', '#9aff9a']] },
+    { head: 'GROW STRONGER', hc: '#7ae8ff', art: <Icon id="gem" s={3} />,
+      lines: [['COLLECT GEMS TO LEVEL UP', '#fff'], ['PICK A NEW WEAPON OR UPGRADE EACH TIME', '#ffe680'], ['SURVIVE TO 15:00 AND BEAT THE CAT EATER', '#fff']] },
+  ];
+  const sl = slides[i];
+  const last = i === slides.length - 1;
+  return (
+    <div className="tourback">
+      <Panel className="abs" style={{ left: 120, top: 56, width: 400, height: 248, padding: 12, textAlign: 'center' }}>
+        <T s={3} c={sl.hc} sh="#1b1424" align="center">{sl.head}</T>
+        <div style={{ height: 100, margin: '14px 0 10px', display: 'flex', alignItems: 'flex-end', justifyContent: 'center' }}>{sl.art}</div>
+        {sl.lines.map(([t, c], k) => <div key={k} style={{ marginBottom: 6 }}><T s={2} c={c} align="center">{t}</T></div>)}
+        <div style={{ position: 'absolute', left: 0, right: 0, bottom: 8, display: 'flex', justifyContent: 'center', gap: 6 }}>
+          {slides.map((_, k) => <span key={k} style={{ width: 8, height: 8, background: k === i ? '#ffd24a' : '#4a3e6a', boxShadow: '0 0 0 1px #0c0814' }} />)}
+        </div>
+      </Panel>
+      <div className="bottomrow">
+        {i > 0 && <Btn onClick={() => setI(i - 1)}>BACK</Btn>}
+        <Btn s={3} color="#2f7a3a" onClick={() => (last ? done() : setI(i + 1))}>{last ? (save.tourDone ? 'GOT IT' : "LET'S GO") : 'NEXT'}</Btn>
+        {!last && <Btn onClick={() => (save.tourDone ? close() : done())}>SKIP</Btn>}
       </div>
     </div>
   );

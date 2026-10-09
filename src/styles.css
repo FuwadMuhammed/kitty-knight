@@ -158,3 +158,5 @@ a.pbtn { display: inline-flex; text-decoration: none; }
 /* iOS Safari: 100vh includes the hidden address bar, so use the real visible height */
 @supports (-webkit-touch-callout: none) { .wrap { height: -webkit-fill-available; } html, body, #root { height: -webkit-fill-available; } }
 @media (max-height: 340px) { .tc-dash { width: 64px; height: 64px; } .tc-pause { right: calc(94px + env(safe-area-inset-right)); } }
+
+.tourback { position: absolute; inset: 0; background: rgba(8, 4, 16, 0.86); z-index: 5; pointer-events: auto; }
