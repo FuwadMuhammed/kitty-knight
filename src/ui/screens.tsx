@@ -190,7 +190,7 @@ export function Collection({ back }: { back: () => void }) {
       <div className="tabs">
         {tabs.map(([k, label]) => <Btn key={k} small active={sec === k} onClick={() => { setSec(k); setSel(null); }}>{label}</Btn>)}
       </div>
-      <div className="center" style={{ top: 90 }}><T s={2} c="#b9aed0">{`${have}/${items.length} ${sec === 'weapons' || sec === 'passives' ? 'UNLOCKED' : 'DISCOVERED'}`}</T></div>
+      <div className="center" style={{ top: 82 }}><T s={2} c="#b9aed0">{`${have}/${items.length} ${sec === 'weapons' || sec === 'passives' ? 'UNLOCKED' : 'DISCOVERED'}`}</T></div>
       <div className="grid">
         {items.map((it) => {
           const k = known(it.id);
