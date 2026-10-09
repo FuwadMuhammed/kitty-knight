@@ -254,7 +254,7 @@ export class Game {
     this.state = 'PLAYING';
     this.ev.overlay('none');
     this.keys.clear();
-    this.say('Too big.', 2.6, 0.8);
+    this.say('Too big a sword...', 2.6, 0.8);
     unlockAudio();
     applyAudioSettings();
     startMusic();
