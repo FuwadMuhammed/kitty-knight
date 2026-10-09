@@ -127,7 +127,7 @@ function Tour({ done, close }: { done: () => void; close: () => void }) {
       <div className="bottomrow">
         {i > 0 && <Btn onClick={() => setI(i - 1)}>BACK</Btn>}
         <Btn s={3} color="#2f7a3a" onClick={() => (last ? done() : setI(i + 1))}>{last ? (save.tourDone ? 'GOT IT' : "LET'S GO") : 'NEXT'}</Btn>
-        {!last && <Btn onClick={() => (save.tourDone ? close() : done())}>SKIP</Btn>}
+        {!last && save.tourDone && <Btn onClick={close}>SKIP</Btn>}
       </div>
     </div>
   );
