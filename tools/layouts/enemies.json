@@ -1,0 +1,125 @@
+{
+ "labelH": 46,
+ "items": [
+  {
+   "id": "rat",
+   "group": "enemies",
+   "target": [
+    21,
+    15
+   ],
+   "n": 2,
+   "align": "bottom"
+  },
+  {
+   "id": "slime",
+   "group": "enemies",
+   "target": [
+    21,
+    18
+   ],
+   "n": 2,
+   "align": "bottom"
+  },
+  {
+   "id": "bat",
+   "group": "enemies",
+   "target": [
+    23,
+    16
+   ],
+   "n": 2,
+   "align": "center"
+  },
+  {
+   "id": "spider",
+   "group": "enemies",
+   "target": [
+    21,
+    15
+   ],
+   "n": 2,
+   "align": "center"
+  },
+  {
+   "id": "goose",
+   "group": "enemies",
+   "target": [
+    25,
+    25
+   ],
+   "n": 2,
+   "align": "bottom"
+  },
+  {
+   "id": "goblin",
+   "group": "enemies",
+   "target": [
+    21,
+    26
+   ],
+   "n": 2,
+   "align": "bottom"
+  },
+  {
+   "id": "skeleton",
+   "group": "enemies",
+   "target": [
+    21,
+    28
+   ],
+   "n": 2,
+   "align": "bottom"
+  },
+  {
+   "id": "vacuum",
+   "group": "enemies",
+   "target": [
+    27,
+    16
+   ],
+   "n": 2,
+   "align": "bottom"
+  },
+  {
+   "id": "wolf",
+   "group": "enemies",
+   "target": [
+    29,
+    20
+   ],
+   "n": 2,
+   "align": "bottom"
+  },
+  {
+   "id": "wizard",
+   "group": "enemies",
+   "target": [
+    21,
+    30
+   ],
+   "n": 2,
+   "align": "bottom"
+  },
+  {
+   "id": "orc",
+   "group": "enemies",
+   "target": [
+    31,
+    31
+   ],
+   "n": 2,
+   "align": "bottom"
+  },
+  {
+   "id": "gspider",
+   "group": "enemies",
+   "target": [
+    37,
+    26
+   ],
+   "n": 2,
+   "align": "center"
+  }
+ ]
+}

@@ -1,0 +1,80 @@
+{
+ "labelH": 72,
+ "items": [
+  {
+   "id": "icon_coin",
+   "group": "icons",
+   "target": [
+    16,
+    16
+   ],
+   "n": 1,
+   "align": "center",
+   "speckFrac": 0.4
+  },
+  {
+   "id": "icon_skull",
+   "group": "icons",
+   "target": [
+    16,
+    16
+   ],
+   "n": 1,
+   "align": "center"
+  },
+  {
+   "id": "icon_bone",
+   "group": "icons",
+   "target": [
+    16,
+    16
+   ],
+   "n": 1,
+   "align": "center"
+  },
+  {
+   "id": "icon_gem",
+   "group": "icons",
+   "target": [
+    16,
+    16
+   ],
+   "n": 1,
+   "align": "center"
+  },
+  {
+   "id": "icon_meat",
+   "group": "icons",
+   "target": [
+    16,
+    16
+   ],
+   "n": 1,
+   "align": "center"
+  },
+  {
+   "id": "icon_chest",
+   "group": "icons",
+   "target": [
+    16,
+    16
+   ],
+   "n": 1,
+   "align": "center",
+   "speckFrac": 0.4
+  },
+  {
+   "id": "icon_locked",
+   "group": "icons",
+   "target": [
+    16,
+    16
+   ],
+   "n": 1,
+   "align": "center"
+  }
+ ],
+ "killBorder": true,
+ "darkBg": true,
+ "speckFrac": 0.16
+}

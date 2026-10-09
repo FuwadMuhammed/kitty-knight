@@ -1,0 +1,55 @@
+{
+ "labelH": 45,
+ "items": [
+  {
+   "id": "dog",
+   "group": "bosses",
+   "target": [
+    60,
+    50
+   ],
+   "n": 2,
+   "align": "bottom"
+  },
+  {
+   "id": "roobo",
+   "group": "bosses",
+   "target": [
+    76,
+    52
+   ],
+   "n": 2,
+   "align": "bottom"
+  },
+  {
+   "id": "dragon",
+   "group": "bosses",
+   "target": [
+    100,
+    78
+   ],
+   "n": 2,
+   "align": "bottom"
+  },
+  {
+   "id": "knight",
+   "group": "bosses",
+   "target": [
+    68,
+    76
+   ],
+   "n": 2,
+   "align": "bottom"
+  },
+  {
+   "id": "cateater",
+   "group": "bosses",
+   "target": [
+    112,
+    84
+   ],
+   "n": 2,
+   "align": "bottom"
+  }
+ ]
+}

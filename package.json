@@ -1,0 +1,25 @@
+{
+  "name": "tiny-knight-survivors",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1 --port 5188",
+    "build": "tsc --noEmit && vite build",
+    "sim": "tsx tools/sim.ts",
+    "preview": "vite preview --host 127.0.0.1 --port 4173"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "canvas": "^3.2.3",
+    "tsx": "^4.23.15",
+    "typescript": "^5.5.4",
+    "vite": "^5.4.2"
+  }
+}

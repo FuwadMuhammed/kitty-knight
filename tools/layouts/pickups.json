@@ -1,0 +1,167 @@
+{
+ "labelH": 60,
+ "items": [
+  {
+   "id": "gemB",
+   "group": "pickups",
+   "target": [
+    11,
+    11
+   ],
+   "n": 2,
+   "align": "center",
+   "outline": false,
+   "minSpeck": 8,
+   "darkBg": true,
+   "killBorder": true
+  },
+  {
+   "id": "gemG",
+   "group": "pickups",
+   "target": [
+    11,
+    11
+   ],
+   "n": 2,
+   "align": "center",
+   "outline": false,
+   "minSpeck": 8,
+   "darkBg": true,
+   "killBorder": true
+  },
+  {
+   "id": "gemR",
+   "group": "pickups",
+   "target": [
+    11,
+    11
+   ],
+   "n": 2,
+   "align": "center",
+   "outline": false,
+   "minSpeck": 8,
+   "darkBg": true,
+   "killBorder": true
+  },
+  {
+   "id": "gemP",
+   "group": "pickups",
+   "target": [
+    11,
+    11
+   ],
+   "n": 2,
+   "align": "center",
+   "outline": false,
+   "minSpeck": 8,
+   "darkBg": true,
+   "killBorder": true
+  },
+  {
+   "id": "meat",
+   "group": "pickups",
+   "target": [
+    14,
+    12
+   ],
+   "n": 1,
+   "align": "center",
+   "outline": false,
+   "minSpeck": 4,
+   "darkBg": true,
+   "killBorder": true
+  },
+  {
+   "id": "coin",
+   "group": "pickups",
+   "target": [
+    11,
+    11
+   ],
+   "n": 3,
+   "align": "center",
+   "outline": false,
+   "minSpeck": 8,
+   "darkBg": true,
+   "killBorder": true
+  },
+  {
+   "id": "magnet",
+   "group": "pickups",
+   "target": [
+    14,
+    14
+   ],
+   "n": 1,
+   "align": "center",
+   "outline": false,
+   "minSpeck": 4,
+   "darkBg": true,
+   "killBorder": true
+  },
+  {
+   "id": "chest",
+   "group": "pickups",
+   "target": [
+    22,
+    22
+   ],
+   "n": 2,
+   "align": "bottom",
+   "outline": false,
+   "darkBg": true,
+   "killBorder": true
+  }
+ ],
+ "cards": [
+  [
+   24,
+   148,
+   291,
+   331
+  ],
+  [
+   310,
+   148,
+   568,
+   331
+  ],
+  [
+   586,
+   148,
+   847,
+   331
+  ],
+  [
+   865,
+   148,
+   1124,
+   331
+  ],
+  [
+   1141,
+   148,
+   1380,
+   331
+  ],
+  [
+   1398,
+   148,
+   1722,
+   331
+  ],
+  [
+   1741,
+   148,
+   1976,
+   345
+  ],
+  [
+   28,
+   360,
+   422,
+   598
+  ]
+ ],
+ "killBorder": true
+}

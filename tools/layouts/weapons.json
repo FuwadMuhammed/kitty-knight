@@ -1,0 +1,277 @@
+{
+ "labelH": 45,
+ "items": [
+  {
+   "id": "yarn",
+   "group": "weapons",
+   "target": [
+    12,
+    12
+   ],
+   "n": 1,
+   "align": "center"
+  },
+  {
+   "id": "chaosyarn",
+   "group": "weapons",
+   "target": [
+    14,
+    14
+   ],
+   "n": 1,
+   "align": "center"
+  },
+  {
+   "id": "fish",
+   "group": "weapons",
+   "target": [
+    16,
+    10
+   ],
+   "n": 2,
+   "align": "center",
+   "start": 1,
+   "use": 1
+  },
+  {
+   "id": "fire",
+   "group": "weapons",
+   "target": [
+    12,
+    12
+   ],
+   "n": 2,
+   "align": "center"
+  },
+  {
+   "id": "bossfire",
+   "group": "weapons",
+   "target": [
+    16,
+    16
+   ],
+   "n": 2,
+   "align": "center"
+  },
+  {
+   "id": "orb",
+   "group": "weapons",
+   "target": [
+    12,
+    12
+   ],
+   "n": 2,
+   "align": "center"
+  },
+  {
+   "id": "dust",
+   "group": "weapons",
+   "target": [
+    10,
+    10
+   ],
+   "n": 2,
+   "align": "center"
+  },
+  {
+   "id": "bomb",
+   "group": "weapons",
+   "target": [
+    14,
+    14
+   ],
+   "n": 2,
+   "align": "center",
+   "start": 1,
+   "use": 1,
+   "darkBg": false
+  },
+  {
+   "id": "paw",
+   "group": "weapons",
+   "target": [
+    40,
+    40
+   ],
+   "n": 1,
+   "align": "center"
+  },
+  {
+   "id": "dragonP",
+   "group": "weapons",
+   "target": [
+    24,
+    16
+   ],
+   "n": 2,
+   "align": "center",
+   "flipX": true
+  },
+  {
+   "id": "stormP",
+   "group": "weapons",
+   "target": [
+    26,
+    18
+   ],
+   "n": 2,
+   "align": "center",
+   "flipX": true
+  },
+  {
+   "id": "shield",
+   "group": "weapons",
+   "target": [
+    14,
+    14
+   ],
+   "n": 1,
+   "align": "center",
+   "darkBg": false
+  },
+  {
+   "id": "bone",
+   "group": "weapons",
+   "target": [
+    12,
+    12
+   ],
+   "n": 2,
+   "align": "center",
+   "darkBg": false
+  },
+  {
+   "id": "leaf",
+   "group": "weapons",
+   "target": [
+    10,
+    10
+   ],
+   "n": 1,
+   "align": "center"
+  },
+  {
+   "id": "hairball",
+   "group": "weapons",
+   "target": [
+    14,
+    14
+   ],
+   "n": 2,
+   "align": "center"
+  },
+  {
+   "id": "bullet",
+   "group": "weapons",
+   "target": [
+    8,
+    6
+   ],
+   "n": 1,
+   "align": "center"
+  },
+  {
+   "id": "catarang",
+   "group": "weapons",
+   "target": [
+    16,
+    16
+   ],
+   "n": 1,
+   "align": "center"
+  },
+  {
+   "id": "marbleA",
+   "group": "weapons",
+   "target": [
+    12,
+    12
+   ],
+   "n": 1,
+   "align": "center"
+  },
+  {
+   "id": "marbleB",
+   "group": "weapons",
+   "target": [
+    12,
+    12
+   ],
+   "n": 1,
+   "align": "center"
+  },
+  {
+   "id": "marbleC",
+   "group": "weapons",
+   "target": [
+    12,
+    12
+   ],
+   "n": 1,
+   "align": "center"
+  },
+  {
+   "id": "mouse",
+   "group": "weapons",
+   "target": [
+    16,
+    12
+   ],
+   "n": 2,
+   "align": "center"
+  },
+  {
+   "id": "pellet",
+   "group": "weapons",
+   "target": [
+    6,
+    6
+   ],
+   "n": 1,
+   "align": "center"
+  },
+  {
+   "id": "twister",
+   "group": "weapons",
+   "target": [
+    20,
+    24
+   ],
+   "n": 2,
+   "align": "center"
+  },
+  {
+   "id": "dice",
+   "group": "weapons",
+   "target": [
+    10,
+    10
+   ],
+   "n": 6,
+   "align": "center"
+  },
+  {
+   "id": "flask",
+   "group": "weapons",
+   "target": [
+    14,
+    14
+   ],
+   "n": 1,
+   "align": "center",
+   "skip": "AI drew a sparkle star instead of a flask - keeping the code-drawn flask"
+  },
+  {
+   "id": "scratcher",
+   "group": "weapons",
+   "target": [
+    18,
+    18
+   ],
+   "n": 1,
+   "align": "center"
+  }
+ ],
+ "killBorder": true,
+ "darkBg": true
+}

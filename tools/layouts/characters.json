@@ -1,0 +1,11 @@
+{
+  "items": [
+    { "id": "kitten", "group": "characters", "target": [42, 48], "align": "bottom", "shared": true, "fist": [95, 352],
+      "frames": [[32,118,282,319],[326,118,282,319],[619,118,282,319],[912,118,282,319],[1206,118,282,319],[1498,118,284,319]] },
+    { "id": "kitten_dead", "group": "characters", "target": [48, 42], "scaleLike": "kitten", "align": "center",
+      "frames": [[32,525,321,275]] },
+    { "id": "sword", "group": "characters", "target": [12, 40], "align": "top", "fitHeight": true, "frames": [[392,520,100,285]] },
+    { "id": "holysword", "group": "characters", "target": [12, 40], "align": "top", "fitHeight": true, "frames": [[632,520,100,285]] },
+    { "id": "runesword", "group": "characters", "target": [12, 40], "align": "top", "fitHeight": true, "frames": [[870,520,100,285]] }
+  ]
+}

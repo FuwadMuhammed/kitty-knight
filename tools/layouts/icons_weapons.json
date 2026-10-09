@@ -1,0 +1,272 @@
+{
+ "labelH": 50,
+ "items": [
+  {
+   "id": "icon_sword",
+   "group": "icons",
+   "target": [
+    16,
+    16
+   ],
+   "n": 2,
+   "align": "center",
+   "use": 1
+  },
+  {
+   "id": "icon_yarn",
+   "group": "icons",
+   "target": [
+    16,
+    16
+   ],
+   "n": 2,
+   "align": "center",
+   "use": 1
+  },
+  {
+   "id": "icon_paw",
+   "group": "icons",
+   "target": [
+    16,
+    16
+   ],
+   "n": 2,
+   "align": "center",
+   "use": 1
+  },
+  {
+   "id": "icon_fish",
+   "group": "icons",
+   "target": [
+    16,
+    16
+   ],
+   "n": 2,
+   "align": "center",
+   "use": 1
+  },
+  {
+   "id": "icon_hiss",
+   "group": "icons",
+   "target": [
+    16,
+    16
+   ],
+   "n": 2,
+   "align": "center",
+   "use": 1
+  },
+  {
+   "id": "icon_shield",
+   "group": "icons",
+   "target": [
+    16,
+    16
+   ],
+   "n": 2,
+   "align": "center",
+   "use": 1
+  },
+  {
+   "id": "icon_dash",
+   "group": "icons",
+   "target": [
+    16,
+    16
+   ],
+   "n": 2,
+   "align": "center",
+   "use": 1
+  },
+  {
+   "id": "icon_lightning",
+   "group": "icons",
+   "target": [
+    16,
+    16
+   ],
+   "n": 2,
+   "align": "center",
+   "use": 1
+  },
+  {
+   "id": "icon_dragon",
+   "group": "icons",
+   "target": [
+    16,
+    16
+   ],
+   "n": 2,
+   "align": "center",
+   "use": 1
+  },
+  {
+   "id": "icon_bomb",
+   "group": "icons",
+   "target": [
+    16,
+    16
+   ],
+   "n": 2,
+   "align": "center",
+   "use": 1
+  },
+  {
+   "id": "icon_hairball",
+   "group": "icons",
+   "target": [
+    16,
+    16
+   ],
+   "n": 2,
+   "align": "center",
+   "use": 1
+  },
+  {
+   "id": "icon_marbles",
+   "group": "icons",
+   "target": [
+    16,
+    16
+   ],
+   "n": 2,
+   "align": "center",
+   "use": 1
+  },
+  {
+   "id": "icon_blaster",
+   "group": "icons",
+   "target": [
+    16,
+    16
+   ],
+   "n": 2,
+   "align": "center",
+   "use": 1
+  },
+  {
+   "id": "icon_catarang",
+   "group": "icons",
+   "target": [
+    16,
+    16
+   ],
+   "n": 2,
+   "align": "center",
+   "use": 1
+  },
+  {
+   "id": "icon_scratcher",
+   "group": "icons",
+   "target": [
+    16,
+    16
+   ],
+   "n": 2,
+   "align": "center",
+   "use": 1
+  },
+  {
+   "id": "icon_laser",
+   "group": "icons",
+   "target": [
+    16,
+    16
+   ],
+   "n": 2,
+   "align": "center",
+   "use": 1
+  },
+  {
+   "id": "icon_mouse",
+   "group": "icons",
+   "target": [
+    16,
+    16
+   ],
+   "n": 2,
+   "align": "center",
+   "use": 1
+  },
+  {
+   "id": "icon_shotgun",
+   "group": "icons",
+   "target": [
+    16,
+    16
+   ],
+   "n": 2,
+   "align": "center",
+   "use": 1
+  },
+  {
+   "id": "icon_milk2",
+   "group": "icons",
+   "target": [
+    16,
+    16
+   ],
+   "n": 2,
+   "align": "center",
+   "use": 1
+  },
+  {
+   "id": "icon_twister",
+   "group": "icons",
+   "target": [
+    16,
+    16
+   ],
+   "n": 2,
+   "align": "center",
+   "use": 1
+  },
+  {
+   "id": "icon_voidbox",
+   "group": "icons",
+   "target": [
+    16,
+    16
+   ],
+   "n": 2,
+   "align": "center",
+   "use": 1
+  },
+  {
+   "id": "icon_flask",
+   "group": "icons",
+   "target": [
+    16,
+    16
+   ],
+   "n": 2,
+   "align": "center",
+   "use": 1
+  },
+  {
+   "id": "icon_dice",
+   "group": "icons",
+   "target": [
+    16,
+    16
+   ],
+   "n": 2,
+   "align": "center",
+   "use": 1
+  },
+  {
+   "id": "icon_purr",
+   "group": "icons",
+   "target": [
+    16,
+    16
+   ],
+   "n": 2,
+   "align": "center",
+   "use": 1
+  }
+ ],
+ "killBorder": true,
+ "darkBg": true,
+ "speckFrac": 0.1
+}

@@ -1,0 +1,251 @@
+{
+ "labelH": 54,
+ "items": [
+  {
+   "id": "icon_collar",
+   "group": "icons",
+   "target": [
+    16,
+    16
+   ],
+   "n": 2,
+   "align": "center",
+   "use": 1
+  },
+  {
+   "id": "icon_boots",
+   "group": "icons",
+   "target": [
+    16,
+    16
+   ],
+   "n": 2,
+   "align": "center",
+   "use": 1
+  },
+  {
+   "id": "icon_cape",
+   "group": "icons",
+   "target": [
+    16,
+    16
+   ],
+   "n": 2,
+   "align": "center",
+   "use": 1
+  },
+  {
+   "id": "icon_armor",
+   "group": "icons",
+   "target": [
+    16,
+    16
+   ],
+   "n": 2,
+   "align": "center",
+   "use": 1
+  },
+  {
+   "id": "icon_snack",
+   "group": "icons",
+   "target": [
+    16,
+    16
+   ],
+   "n": 2,
+   "align": "center",
+   "use": 1
+  },
+  {
+   "id": "icon_bell",
+   "group": "icons",
+   "target": [
+    16,
+    16
+   ],
+   "n": 2,
+   "align": "center",
+   "use": 1
+  },
+  {
+   "id": "icon_claws",
+   "group": "icons",
+   "target": [
+    16,
+    16
+   ],
+   "n": 2,
+   "align": "center",
+   "use": 1
+  },
+  {
+   "id": "icon_bigpaws",
+   "group": "icons",
+   "target": [
+    16,
+    16
+   ],
+   "n": 2,
+   "align": "center",
+   "use": 1
+  },
+  {
+   "id": "icon_catnip",
+   "group": "icons",
+   "target": [
+    16,
+    16
+   ],
+   "n": 2,
+   "align": "center",
+   "use": 1
+  },
+  {
+   "id": "icon_heart",
+   "group": "icons",
+   "target": [
+    16,
+    16
+   ],
+   "n": 2,
+   "align": "center",
+   "use": 1
+  },
+  {
+   "id": "icon_feather",
+   "group": "icons",
+   "target": [
+    16,
+    16
+   ],
+   "n": 2,
+   "align": "center",
+   "use": 1
+  },
+  {
+   "id": "icon_bow",
+   "group": "icons",
+   "target": [
+    16,
+    16
+   ],
+   "n": 2,
+   "align": "center",
+   "use": 1
+  },
+  {
+   "id": "icon_milk",
+   "group": "icons",
+   "target": [
+    16,
+    16
+   ],
+   "n": 2,
+   "align": "center",
+   "use": 1
+  },
+  {
+   "id": "icon_coat",
+   "group": "icons",
+   "target": [
+    16,
+    16
+   ],
+   "n": 2,
+   "align": "center",
+   "use": 1
+  },
+  {
+   "id": "icon_nimble",
+   "group": "icons",
+   "target": [
+    16,
+    16
+   ],
+   "n": 2,
+   "align": "center",
+   "use": 1
+  },
+  {
+   "id": "icon_spiky",
+   "group": "icons",
+   "target": [
+    16,
+    16
+   ],
+   "n": 2,
+   "align": "center",
+   "use": 1
+  },
+  {
+   "id": "icon_tuna",
+   "group": "icons",
+   "target": [
+    16,
+    16
+   ],
+   "n": 2,
+   "align": "center",
+   "use": 1
+  },
+  {
+   "id": "icon_spool",
+   "group": "icons",
+   "target": [
+    16,
+    16
+   ],
+   "n": 2,
+   "align": "center",
+   "use": 1
+  },
+  {
+   "id": "icon_pounce",
+   "group": "icons",
+   "target": [
+    16,
+    16
+   ],
+   "n": 2,
+   "align": "center",
+   "use": 1
+  },
+  {
+   "id": "icon_purse",
+   "group": "icons",
+   "target": [
+    16,
+    16
+   ],
+   "n": 2,
+   "align": "center",
+   "use": 1
+  },
+  {
+   "id": "icon_charm",
+   "group": "icons",
+   "target": [
+    16,
+    16
+   ],
+   "n": 2,
+   "align": "center",
+   "use": 1,
+   "darkBg": false
+  },
+  {
+   "id": "icon_chaos",
+   "group": "icons",
+   "target": [
+    16,
+    16
+   ],
+   "n": 2,
+   "align": "center",
+   "use": 1
+  }
+ ],
+ "killBorder": true,
+ "darkBg": true,
+ "speckFrac": 0.1
+}

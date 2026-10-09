@@ -1,0 +1,14 @@
+{
+  "name": "Tiny Knight Survivors",
+  "short_name": "Kitty Knight",
+  "description": "One tiny knight. An unreasonable number of monsters.",
+  "start_url": ".",
+  "display": "fullscreen",
+  "orientation": "landscape",
+  "background_color": "#0b0712",
+  "theme_color": "#0b0712",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" }
+  ]
+}

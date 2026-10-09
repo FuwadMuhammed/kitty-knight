@@ -1,0 +1,445 @@
+{
+ "sprites": {
+  "kitten": [
+   "characters/kitten_0.png",
+   "characters/kitten_1.png",
+   "characters/kitten_2.png",
+   "characters/kitten_3.png",
+   "characters/kitten_4.png",
+   "characters/kitten_5.png"
+  ],
+  "kitten_dead": [
+   "characters/kitten_dead_0.png"
+  ],
+  "sword": [
+   "characters/sword_0.png"
+  ],
+  "holysword": [
+   "characters/holysword_0.png"
+  ],
+  "runesword": [
+   "characters/runesword_0.png"
+  ],
+  "rat": [
+   "enemies/rat_0.png",
+   "enemies/rat_1.png"
+  ],
+  "slime": [
+   "enemies/slime_0.png",
+   "enemies/slime_1.png"
+  ],
+  "bat": [
+   "enemies/bat_0.png",
+   "enemies/bat_1.png"
+  ],
+  "spider": [
+   "enemies/spider_0.png",
+   "enemies/spider_1.png"
+  ],
+  "goose": [
+   "enemies/goose_0.png",
+   "enemies/goose_1.png"
+  ],
+  "goblin": [
+   "enemies/goblin_0.png",
+   "enemies/goblin_1.png"
+  ],
+  "skeleton": [
+   "enemies/skeleton_0.png",
+   "enemies/skeleton_1.png"
+  ],
+  "vacuum": [
+   "enemies/vacuum_0.png",
+   "enemies/vacuum_1.png"
+  ],
+  "wolf": [
+   "enemies/wolf_0.png",
+   "enemies/wolf_1.png"
+  ],
+  "wizard": [
+   "enemies/wizard_0.png",
+   "enemies/wizard_1.png"
+  ],
+  "orc": [
+   "enemies/orc_0.png",
+   "enemies/orc_1.png"
+  ],
+  "gspider": [
+   "enemies/gspider_0.png",
+   "enemies/gspider_1.png"
+  ],
+  "dog": [
+   "bosses/dog_0.png",
+   "bosses/dog_1.png"
+  ],
+  "roobo": [
+   "bosses/roobo_0.png",
+   "bosses/roobo_1.png"
+  ],
+  "dragon": [
+   "bosses/dragon_0.png",
+   "bosses/dragon_1.png"
+  ],
+  "knight": [
+   "bosses/knight_0.png",
+   "bosses/knight_1.png"
+  ],
+  "cateater": [
+   "bosses/cateater_0.png",
+   "bosses/cateater_1.png"
+  ],
+  "yarn": [
+   "weapons/yarn_0.png"
+  ],
+  "chaosyarn": [
+   "weapons/chaosyarn_0.png"
+  ],
+  "fish": [
+   "weapons/fish_0.png"
+  ],
+  "fire": [
+   "weapons/fire_0.png",
+   "weapons/fire_1.png"
+  ],
+  "bossfire": [
+   "weapons/bossfire_0.png",
+   "weapons/bossfire_1.png"
+  ],
+  "orb": [
+   "weapons/orb_0.png",
+   "weapons/orb_1.png"
+  ],
+  "dust": [
+   "weapons/dust_0.png",
+   "weapons/dust_1.png"
+  ],
+  "bomb": [
+   "weapons/bomb_0.png"
+  ],
+  "paw": [
+   "weapons/paw_0.png"
+  ],
+  "dragonP": [
+   "weapons/dragonP_0.png",
+   "weapons/dragonP_1.png"
+  ],
+  "stormP": [
+   "weapons/stormP_0.png",
+   "weapons/stormP_1.png"
+  ],
+  "shield": [
+   "weapons/shield_0.png"
+  ],
+  "bone": [
+   "weapons/bone_0.png",
+   "weapons/bone_1.png"
+  ],
+  "leaf": [
+   "weapons/leaf_0.png"
+  ],
+  "hairball": [
+   "weapons/hairball_0.png",
+   "weapons/hairball_1.png"
+  ],
+  "bullet": [
+   "weapons/bullet_0.png"
+  ],
+  "catarang": [
+   "weapons/catarang_0.png"
+  ],
+  "marbleA": [
+   "weapons/marbleA_0.png"
+  ],
+  "marbleB": [
+   "weapons/marbleB_0.png"
+  ],
+  "marbleC": [
+   "weapons/marbleC_0.png"
+  ],
+  "mouse": [
+   "weapons/mouse_0.png",
+   "weapons/mouse_1.png"
+  ],
+  "pellet": [
+   "weapons/pellet_0.png"
+  ],
+  "twister": [
+   "weapons/twister_0.png",
+   "weapons/twister_1.png"
+  ],
+  "dice": [
+   "weapons/dice_0.png",
+   "weapons/dice_1.png",
+   "weapons/dice_2.png",
+   "weapons/dice_3.png",
+   "weapons/dice_4.png",
+   "weapons/dice_5.png"
+  ],
+  "scratcher": [
+   "weapons/scratcher_0.png"
+  ],
+  "gemB": [
+   "pickups/gemB_0.png",
+   "pickups/gemB_1.png"
+  ],
+  "gemG": [
+   "pickups/gemG_0.png",
+   "pickups/gemG_1.png"
+  ],
+  "gemR": [
+   "pickups/gemR_0.png",
+   "pickups/gemR_1.png"
+  ],
+  "gemP": [
+   "pickups/gemP_0.png",
+   "pickups/gemP_1.png"
+  ],
+  "meat": [
+   "pickups/meat_0.png"
+  ],
+  "coin": [
+   "pickups/coin_0.png",
+   "pickups/coin_1.png",
+   "pickups/coin_2.png"
+  ],
+  "magnet": [
+   "pickups/magnet_0.png"
+  ],
+  "icon_sword": [
+   "icons/icon_sword_0.png"
+  ],
+  "icon_yarn": [
+   "icons/icon_yarn_0.png"
+  ],
+  "icon_paw": [
+   "icons/icon_paw_0.png"
+  ],
+  "icon_fish": [
+   "icons/icon_fish_0.png"
+  ],
+  "icon_hiss": [
+   "icons/icon_hiss_0.png"
+  ],
+  "icon_shield": [
+   "icons/icon_shield_0.png"
+  ],
+  "icon_dash": [
+   "icons/icon_dash_0.png"
+  ],
+  "icon_lightning": [
+   "icons/icon_lightning_0.png"
+  ],
+  "icon_dragon": [
+   "icons/icon_dragon_0.png"
+  ],
+  "icon_bomb": [
+   "icons/icon_bomb_0.png"
+  ],
+  "icon_hairball": [
+   "icons/icon_hairball_0.png"
+  ],
+  "icon_marbles": [
+   "icons/icon_marbles_0.png"
+  ],
+  "icon_blaster": [
+   "icons/icon_blaster_0.png"
+  ],
+  "icon_catarang": [
+   "icons/icon_catarang_0.png"
+  ],
+  "icon_scratcher": [
+   "icons/icon_scratcher_0.png"
+  ],
+  "icon_laser": [
+   "icons/icon_laser_0.png"
+  ],
+  "icon_mouse": [
+   "icons/icon_mouse_0.png"
+  ],
+  "icon_shotgun": [
+   "icons/icon_shotgun_0.png"
+  ],
+  "icon_milk2": [
+   "icons/icon_milk2_0.png"
+  ],
+  "icon_twister": [
+   "icons/icon_twister_0.png"
+  ],
+  "icon_voidbox": [
+   "icons/icon_voidbox_0.png"
+  ],
+  "icon_flask": [
+   "icons/icon_flask_0.png"
+  ],
+  "icon_dice": [
+   "icons/icon_dice_0.png"
+  ],
+  "icon_purr": [
+   "icons/icon_purr_0.png"
+  ],
+  "icon_collar": [
+   "icons/icon_collar_0.png"
+  ],
+  "icon_boots": [
+   "icons/icon_boots_0.png"
+  ],
+  "icon_cape": [
+   "icons/icon_cape_0.png"
+  ],
+  "icon_armor": [
+   "icons/icon_armor_0.png"
+  ],
+  "icon_snack": [
+   "icons/icon_snack_0.png"
+  ],
+  "icon_bell": [
+   "icons/icon_bell_0.png"
+  ],
+  "icon_claws": [
+   "icons/icon_claws_0.png"
+  ],
+  "icon_bigpaws": [
+   "icons/icon_bigpaws_0.png"
+  ],
+  "icon_catnip": [
+   "icons/icon_catnip_0.png"
+  ],
+  "icon_heart": [
+   "icons/icon_heart_0.png"
+  ],
+  "icon_feather": [
+   "icons/icon_feather_0.png"
+  ],
+  "icon_bow": [
+   "icons/icon_bow_0.png"
+  ],
+  "icon_milk": [
+   "icons/icon_milk_0.png"
+  ],
+  "icon_coat": [
+   "icons/icon_coat_0.png"
+  ],
+  "icon_nimble": [
+   "icons/icon_nimble_0.png"
+  ],
+  "icon_spiky": [
+   "icons/icon_spiky_0.png"
+  ],
+  "icon_tuna": [
+   "icons/icon_tuna_0.png"
+  ],
+  "icon_spool": [
+   "icons/icon_spool_0.png"
+  ],
+  "icon_pounce": [
+   "icons/icon_pounce_0.png"
+  ],
+  "icon_purse": [
+   "icons/icon_purse_0.png"
+  ],
+  "icon_holyclaws": [
+   "icons/icon_holyclaws_0.png"
+  ],
+  "icon_chaosyarn": [
+   "icons/icon_chaosyarn_0.png"
+  ],
+  "icon_fishapoc": [
+   "icons/icon_fishapoc_0.png"
+  ],
+  "icon_stormdragon": [
+   "icons/icon_stormdragon_0.png"
+  ],
+  "icon_cataclysm": [
+   "icons/icon_cataclysm_0.png"
+  ],
+  "icon_coin": [
+   "icons/icon_coin_0.png"
+  ],
+  "decor_tree": [
+   "world/decor_tree_0.png",
+   "world/decor_tree_1.png",
+   "world/decor_tree_2.png"
+  ],
+  "decor_pine": [
+   "world/decor_pine_0.png"
+  ],
+  "decor_bush": [
+   "world/decor_bush_0.png",
+   "world/decor_bush_1.png"
+  ],
+  "decor_rock": [
+   "world/decor_rock_0.png",
+   "world/decor_rock_1.png",
+   "world/decor_rock_2.png"
+  ],
+  "decor_flower": [
+   "world/decor_flower_0.png",
+   "world/decor_flower_1.png",
+   "world/decor_flower_2.png",
+   "world/decor_flower_3.png",
+   "world/decor_flower_4.png"
+  ],
+  "decor_mush": [
+   "world/decor_mush_0.png",
+   "world/decor_mush_1.png"
+  ],
+  "decor_branch": [
+   "world/decor_branch_0.png"
+  ],
+  "decor_tuft": [
+   "world/decor_tuft_0.png",
+   "world/decor_tuft_1.png"
+  ],
+  "chest": [
+   "pickups/chest_0.png",
+   "pickups/chest_1.png"
+  ],
+  "icon_charm": [
+   "icons/icon_charm_0.png"
+  ],
+  "icon_chaos": [
+   "icons/icon_chaos_0.png"
+  ],
+  "icon_skull": [
+   "icons/icon_skull_0.png"
+  ],
+  "icon_bone": [
+   "icons/icon_bone_0.png"
+  ],
+  "icon_gem": [
+   "icons/icon_gem_0.png"
+  ],
+  "icon_meat": [
+   "icons/icon_meat_0.png"
+  ],
+  "icon_chest": [
+   "icons/icon_chest_0.png"
+  ],
+  "icon_locked": [
+   "icons/icon_locked_0.png"
+  ],
+  "decor_pillar": [
+   "world/decor_pillar_0.png",
+   "world/decor_pillar_1.png"
+  ],
+  "decor_wall": [
+   "world/decor_wall_0.png",
+   "world/decor_wall_1.png"
+  ],
+  "decor_grave": [
+   "world/decor_grave_0.png",
+   "world/decor_grave_1.png"
+  ],
+  "decor_stump": [
+   "world/decor_stump_0.png"
+  ]
+ },
+ "meta": {
+  "kitten": {
+   "fist": [
+    7.5,
+    35.6
+   ]
+  }
+ }
+}

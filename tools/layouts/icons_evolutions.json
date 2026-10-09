@@ -1,0 +1,57 @@
+{
+ "labelH": 78,
+ "items": [
+  {
+   "id": "icon_holyclaws",
+   "group": "icons",
+   "target": [
+    20,
+    20
+   ],
+   "n": 1,
+   "align": "center"
+  },
+  {
+   "id": "icon_chaosyarn",
+   "group": "icons",
+   "target": [
+    20,
+    20
+   ],
+   "n": 1,
+   "align": "center"
+  },
+  {
+   "id": "icon_fishapoc",
+   "group": "icons",
+   "target": [
+    20,
+    20
+   ],
+   "n": 1,
+   "align": "center"
+  },
+  {
+   "id": "icon_stormdragon",
+   "group": "icons",
+   "target": [
+    20,
+    20
+   ],
+   "n": 1,
+   "align": "center"
+  },
+  {
+   "id": "icon_cataclysm",
+   "group": "icons",
+   "target": [
+    20,
+    20
+   ],
+   "n": 1,
+   "align": "center"
+  }
+ ],
+ "killBorder": true,
+ "darkBg": true
+}
