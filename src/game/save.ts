@@ -11,6 +11,7 @@ export interface SaveData {
   best: { time: number; level: number; kills: number; win: boolean };
   tutorialDone: boolean;
   tourDone: boolean;
+  levelTipDone: boolean;
   runs: number;
   unlocked: Record<string, 1>;
   stats: Record<string, number>;
@@ -27,6 +28,7 @@ export const defaultSave = (): SaveData => ({
   best: { time: 0, level: 1, kills: 0, win: false },
   tutorialDone: false,
   tourDone: false,
+  levelTipDone: false,
   runs: 0,
   unlocked: {},
   stats: {},
@@ -47,6 +49,7 @@ function sanitize(raw: any): SaveData {
   }
   d.tutorialDone = !!raw.tutorialDone;
   d.tourDone = !!raw.tourDone || d.tutorialDone;
+  d.levelTipDone = !!raw.levelTipDone || d.tutorialDone;
   if (typeof raw.runs === 'number') d.runs = raw.runs;
   if (raw.unlocked && typeof raw.unlocked === 'object') for (const k of Object.keys(raw.unlocked)) d.unlocked[k] = 1;
   for (const sec of ['stats', 'killsBy'] as const) if (raw[sec] && typeof raw[sec] === 'object') for (const k of Object.keys(raw[sec])) if (typeof raw[sec][k] === 'number' && isFinite(raw[sec][k])) d[sec][k] = raw[sec][k];

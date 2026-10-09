@@ -306,7 +306,9 @@ export function CelebrationFx({ gold = false }: { gold?: boolean }) {
 }
 
 // ------------------------------------------------------------------ LEVEL UP
-export function LevelUp({ cards, level, remaining, choose }: { cards: Card[]; level: number; remaining: number; choose: (c: Card) => void }) {
+export function LevelUp({ cards, level, remaining, choose: pick }: { cards: Card[]; level: number; remaining: number; choose: (c: Card) => void }) {
+  const [tip] = useState(() => !save.levelTipDone);
+  const choose = (c: Card) => { if (!save.levelTipDone) { save.levelTipDone = true; persist(); } pick(c); };
   useEffect(() => {
     const h = (e: KeyboardEvent) => {
       const i = ['Digit1', 'Digit2', 'Digit3', 'Numpad1', 'Numpad2', 'Numpad3'].indexOf(e.code) % 3;
@@ -323,6 +325,11 @@ export function LevelUp({ cards, level, remaining, choose }: { cards: Card[]; le
         <div style={{ height: 4 }} />
         <T s={2} c="#bfe4ff">{`LEVEL ${level}${remaining > 1 ? `  (${remaining - 1} MORE)` : ''}`}</T>
       </div>
+      {tip && (
+        <div className="center" style={{ top: 340, zIndex: 3 }}>
+          <T s={2} c="#ffe680">LEVEL UP MAKES YOU STRONGER! PICK ONE UPGRADE. CHOOSE WISELY!</T>
+        </div>
+      )}
       <div className="cards">
         {cards.map((c, i) => {
           const r = RARITY[c.rarity];
