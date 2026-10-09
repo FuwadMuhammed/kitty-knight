@@ -3,8 +3,9 @@
 export const WEB_FONT = true;
 // In-game canvas text (HUD, bubbles) is only 5px tall on the 320x180 buffer; a vector font turns to mush there, so keep the bitmap font.
 export const CANVAS_WEB_FONT = false;
-export const FONT_FAMILY = '"Pixelify Sans", "Press Start 2P", monospace';
+export const FONT_FAMILY = '"VT323", "Pixelify Sans", monospace';
 /** CSS px per glyph-scale step in React UI (bitmap glyph was 5 tall x s). */
-export const UI_FONT_PX = 7;
+export const UI_FONT_PX = 8.5;
+export const UI_FONT_WEIGHT = 400;
 /** Canvas font size for 1x text (drawn on the 320x180 buffer). */
 export const CANVAS_FONT_PX = 7;

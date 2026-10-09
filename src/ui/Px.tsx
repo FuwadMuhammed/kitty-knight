@@ -2,7 +2,7 @@ import React from 'react';
 import { textURL } from '../game/font';
 import { ICON, ensureSprites, iconURL, spriteURL } from '../game/sprites';
 import { sfx } from '../game/audio';
-import { WEB_FONT, FONT_FAMILY, UI_FONT_PX } from '../game/fontConfig';
+import { WEB_FONT, FONT_FAMILY, UI_FONT_PX, UI_FONT_WEIGHT } from '../game/fontConfig';
 
 /** Pixel text: renders each word from the bitmap font as a crisp image so it wraps naturally. */
 export function T({
@@ -13,7 +13,7 @@ export function T({
   if (WEB_FONT) {
     return (
       <span className="pxt webt" aria-label={text} style={{
-        fontFamily: FONT_FAMILY, fontWeight: 600, fontSize: UI_FONT_PX * s, lineHeight: '0.95', color: c, textAlign: align,
+        fontFamily: FONT_FAMILY, fontWeight: UI_FONT_WEIGHT, fontSize: UI_FONT_PX * s, lineHeight: '0.9', color: c, textAlign: align,
         textTransform: 'uppercase', textShadow: sh ? `${s}px ${s}px 0 ${sh}` : undefined, whiteSpace: 'pre-wrap', ...style,
       }}>{text}</span>
     );
