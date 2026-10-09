@@ -16,6 +16,14 @@ npm run build    # production build in dist/
 
 Controls: WASD / arrows to move, Space to dash, Esc to pause. On phones: drag the left side to move, tap Dash.
 
+## Deploy on Vercel
+1. Import `FuwadMuhammed/kitty-knight` in Vercel — the framework (Vite), build command and `dist` output are already set in `vercel.json`.
+2. Deploy. That's it.
+
+The canonical URL, social-share tags, `robots.txt` and `sitemap.xml` are generated at build time from the production domain Vercel provides. If you attach a custom domain, add an environment variable `SITE_URL=https://your-domain.com` (Project → Settings → Environment Variables) and redeploy so every link uses the custom domain.
+
+SEO / branding assets are generated from the game's own sprites with `npx tsx tools/make_brand.ts` (favicon set, app icons, 1200x630 share image).
+
 ## Tech
 React + Vite + TypeScript, HTML Canvas at 320x180 with nearest-neighbour scaling. All audio is synthesized with Web Audio. Art lives in `public/assets` (imported from AI sheets with `tools/auto_import.ts`); anything missing falls back to code-drawn sprites.
 

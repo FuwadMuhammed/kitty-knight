@@ -17,9 +17,34 @@
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "@vitejs/plugin-react": "^4.3.1",
-    "canvas": "^3.2.3",
-    "tsx": "^4.23.15",
     "typescript": "^5.5.4",
     "vite": "^5.4.2"
+  },
+  "description": "Kitty Knight \u2013 Tiny Knight Survivors: a cute pixel-art survivor roguelite starring a tiny kitten in oversized armor. Play free in the browser.",
+  "author": "Fuwad.design",
+  "keywords": [
+    "kitty knight",
+    "tiny knight survivors",
+    "cat knight",
+    "kitten in armor",
+    "cute cat game",
+    "pixel art",
+    "survivor game",
+    "roguelite",
+    "bullet heaven",
+    "browser game",
+    "vampire survivors like"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FuwadMuhammed/kitty-knight.git"
+  },
+  "homepage": "https://github.com/FuwadMuhammed/kitty-knight#readme",
+  "engines": {
+    "node": ">=18"
+  },
+  "optionalDependencies": {
+    "canvas": "^3.2.3",
+    "tsx": "^4.23.15"
   }
 }
