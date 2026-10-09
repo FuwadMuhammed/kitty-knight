@@ -56,7 +56,7 @@ export function HowToPlay({ start, back }: { start: (id: string) => void; back: 
   const sw = rawURL('sword');
   const steps: [string, string, string][] = [
     ['boots', 'MOVE', touchy ? 'DRAG ON THE LEFT SIDE' : 'WASD OR ARROW KEYS'],
-    ['sword', 'FIGHT', 'WEAPONS ATTACK BY THEMSELVES'],
+    ['sword', 'FIGHT', 'YOUR SWORD ATTACKS AUTOMATICALLY'],
     ['gem', 'LEVEL UP', 'COLLECT GEMS, PICK UPGRADES'],
     ['dash', 'DASH', touchy ? 'TAP DASH TO DODGE DANGER' : 'SPACE DODGES DANGER'],
     ['skull', 'WIN', 'DEFEAT THE CAT EATER AT 15:00'],
@@ -108,7 +108,7 @@ function Tour({ done, close }: { done: () => void; close: () => void }) {
   const sp = (id: string, z: number) => { const x = spriteURL(id, 0); return <img className="pxi" src={x.url} width={x.w * z} height={x.h * z} alt="" />; };
   const slides: { head: string; hc: string; art: React.ReactNode; lines: [string, string][] }[] = [
     { head: 'MOVE YOUR KITTY', hc: '#9ae0ff', art: sp('kitten', 2),
-      lines: [[touchy ? 'DRAG ON THE LEFT SIDE TO MOVE' : 'WASD OR ARROW KEYS TO MOVE', '#fff'], ['YOUR SWORD AND TOYS ATTACK BY THEMSELVES', '#ffe680']] },
+      lines: [[touchy ? 'DRAG ON THE LEFT SIDE TO MOVE' : 'WASD OR ARROW KEYS TO MOVE', '#fff'], ['YOUR SWORD ATTACKS AUTOMATICALLY', '#ffe680'], ['NO ATTACK BUTTON, JUST KEEP MOVING', '#fff']] },
     { head: 'DANGER! ENEMIES HURT YOU', hc: '#ff6a6a',
       art: <div style={{ display: 'flex', gap: 14, alignItems: 'flex-end' }}>{sp('rat', 3)}{sp('slime', 3)}{sp('goose', 3)}</div>,
       lines: [['EVERY ENEMY HURTS WHEN IT TOUCHES YOU', '#fff'], ['EVEN THE CUTE LITTLE MICE AND RATS!', '#ff9a9a'], ['KEEP MOVING AND DO NOT LET THEM CATCH YOU', '#ffe680']] },
