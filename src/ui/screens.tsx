@@ -68,7 +68,7 @@ export function HowToPlay({ start, back }: { start: (id: string) => void; back: 
         <div style={{ display: 'flex', justifyContent: 'center', margin: '2px 0 8px' }}>
           <div style={{ position: 'relative', width: k.w * 3, height: k.h * 3 }}>
             <img className="pxi" src={sw.url} width={sw.w * 3} height={sw.h * 3} alt=""
-              style={{ position: 'absolute', left: (k.w - KG.x - SW.gx) * 3, top: (KG.y - SW.gripY) * 3, transformOrigin: `${SW.gx * 3}px ${SW.gripY * 3}px`, transform: 'rotate(0.06rad)' }} />
+              style={{ position: 'absolute', left: (KG.x - SW.gx) * 3, top: (KG.y - SW.gripY) * 3, transformOrigin: `${SW.gx * 3}px ${SW.gripY * 3}px`, transform: 'rotate(-0.06rad)' }} />
             <img className="pxi" src={k.url} width={k.w * 3} height={k.h * 3} alt="" style={{ position: 'absolute', left: 0, top: 0 }} />
           </div>
         </div>
