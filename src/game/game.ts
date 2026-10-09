@@ -254,7 +254,7 @@ export class Game {
     this.state = 'PLAYING';
     this.ev.overlay('none');
     this.keys.clear();
-    this.say('Even small mice are attacking me...', 2.6, 0.8);
+    this.say('Monsters? Before breakfast?', 2.6, 0.8);
     this.say("I'll defend my honor!", 2.6, 3.9);
     unlockAudio();
     applyAudioSettings();
